@@ -29,5 +29,5 @@ class Buah{
 $namabuah = new Buah();
 $warna = new Buah();
 echo $namabuah->NamaBuah();
-echo $warna->WarnaBuah();
+echo $warna->WarnaBuah(); 
 ?>
