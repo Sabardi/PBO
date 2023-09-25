@@ -3,6 +3,7 @@
  * buatlah object matika 
  * buatlah properti angka1 dan angka2 dan hasil
  * buatlah methot penjumlahan dan hasil
+ * angka1 dan angka2 melakukan oprasi aritmatika
  */
 class matika{
     public $angka1;

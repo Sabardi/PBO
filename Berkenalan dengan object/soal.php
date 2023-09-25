@@ -23,21 +23,36 @@ use produk as GlobalProduk;
     function pesanProduk(){
         $this->stok = $this->stok -1;// stok sama dengan stok untuk mengurangi jumlah stok nya
     }
+    
+    function BorongProduk($jumlah){ //$jumlah merupakan parameter
+        $this->stok = $this->stok - $jumlah;;
+    }
 
     function cekStok(){
-        return "sisa stok = ".$this->stok. "<br>";
+        return " sisa stok = ".$this->stok. "<br>";
     }
+
  }
 
  $motor = new Produk();
  $motor->jenis = "motor";
  $motor->merek = "supra";
  $motor->stok = 100;
-
+ 
  echo "Jumlah produk : $motor->stok <br>";
-echo $motor->pesanProduk();
-echo $motor->pesanProduk();
-echo $motor->pesanProduk();
-echo $motor->pesanProduk();
-echo $motor->cekStok();//sisa dari produk setelah di panggil beberapa kali
+ echo $motor->pesanProduk();
+ echo $motor->pesanProduk();
+ echo $motor->pesanProduk();
+ echo $motor->pesanProduk();
+ echo $motor->cekStok();//sisa dari produk setelah di panggil beberapa kali
+ 
+ /*membuat method
+ borongProduk(). Jika pada pesanProduk() hanya bisa memesan 1 buah produk saja, pada
+ method borongProduk() ini bisa membeli banyak produk sekaligus. Jumlah produk yang dibeli
+ nantinya akan menjadi sebuah argument*/
+ 
+ echo "sisa motor di Borong ".$motor->BorongProduk(10);// sisa stok nya
+ echo "sisa motor di Borong ".$motor->BorongProduk(80);// sisa stok nya
+ echo $motor->cekStok();
+
 ?>
