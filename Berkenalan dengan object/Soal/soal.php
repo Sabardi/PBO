@@ -25,7 +25,7 @@ use produk as GlobalProduk;
     }
     
     function BorongProduk($jumlah = 10){ //$jumlah merupakan parameter //meskipun di berikan nilai deful yang akan tetep di jalankan ialah parameter yang di isi
-        $this->stok = $this->stok - $jumlah;;
+        $this->stok = $this->stok - $jumlah;
     }
 
     function cekStok(){

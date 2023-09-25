@@ -1,5 +1,5 @@
 <?php 
-//object dasar start
+//object dasarerd start
 
 class Matimatika {
     function perkalian(){
