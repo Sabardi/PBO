@@ -12,7 +12,7 @@ class produk{
         return "Mesin cuci di pesan";
     }
     function PesananProduk(){
-        return "jenis kendaraan ".$this->jenis. "dan merek nya  ".$this->merek;
+        return "jenis kendaraan ".$this->jenis. "  dan merek nya  ".$this->merek;
     }
 }
 
@@ -39,4 +39,9 @@ $motor->jenis = "motor";
 $motor->merek = "honda";
 echo "<p>merancang method genrik<p> <br>";
 echo $motor->PesananProduk();
+$produk003 = new produk();
+$produk003->jenis = "motor";
+$produk003->merek = "suzuki";
+echo "<br>";
+echo $produk003->PesananProduk();
 ?>
