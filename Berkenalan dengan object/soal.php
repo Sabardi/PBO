@@ -1,4 +1,8 @@
-<?php 
+<?php
+
+use JetBrains\PhpStorm\Internal\ReturnTypeContract;
+use produk as GlobalProduk;
+
 /**
  * todo
 1. Buatlah sebuah class dengan nama Produk. 
@@ -17,13 +21,23 @@
 
     //method
     function pesanProduk(){
-        return $this->$jenis;
+        $this->stok = $this->stok -1;// stok sama dengan stok untuk mengurangi jumlah stok nya
     }
 
     function cekStok(){
-        
+        return "sisa stok = ".$this->stok. "<br>";
     }
  }
 
- $mot
+ $motor = new Produk();
+ $motor->jenis = "motor";
+ $motor->merek = "supra";
+ $motor->stok = 100;
+
+ echo "Jumlah produk : $motor->stok <br>";
+echo $motor->pesanProduk();
+echo $motor->pesanProduk();
+echo $motor->pesanProduk();
+echo $motor->pesanProduk();
+echo $motor->cekStok();//sisa dari produk setelah di panggil beberapa kali
 ?>
