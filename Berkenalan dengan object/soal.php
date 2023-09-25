@@ -24,7 +24,7 @@ use produk as GlobalProduk;
         $this->stok = $this->stok -1;// stok sama dengan stok untuk mengurangi jumlah stok nya
     }
     
-    function BorongProduk($jumlah){ //$jumlah merupakan parameter
+    function BorongProduk($jumlah = 10){ //$jumlah merupakan parameter //meskipun di berikan nilai deful yang akan tetep di jalankan ialah parameter yang di isi
         $this->stok = $this->stok - $jumlah;;
     }
 
@@ -52,7 +52,7 @@ use produk as GlobalProduk;
  nantinya akan menjadi sebuah argument*/
  
  echo "sisa motor di Borong ".$motor->BorongProduk(10);// sisa stok nya
- echo "sisa motor di Borong ".$motor->BorongProduk(80);// sisa stok nya
+ echo "sisa motor di Borong ".$motor->BorongProduk(40);// sisa stok nya
  echo $motor->cekStok();
 
 ?>
