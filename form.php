@@ -6,29 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
+<form action="" method="post">
         <table align="center">
             <tr>
                 <td><label for="">angka1</label></td>
                 <td>:</td>
-                <td><input type="number" name="angka1" id="" placeholder="Masukan nilai nya"></td>
+                <td><input type="number" name="angka1" id="" placeholder="Masukan nilai nya"required></td>
             </tr>
             <tr>
             <td><label for="">angka2</label></td>
             <td>:</td>
-            <td><input type="number" name="angka2" id="" placeholder="Masukan nilai nya"></td>
+            <td><input type="number" name="angka2" id="" placeholder="Masukan nilai nya" required></td>
             </tr>
             <tr>
                 <td>
                     <!--pilihan oprator  -->
-
-                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-                    <label for="vehicle1">penjumlahan</label><br>
-                    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-                    <label for="vehicle2"> perkalian</label><br>
-                    <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                    <label for="vehicle3">pembagian</label>
-                    
+                    <label for="">pilih oprasi</label>
+                    <select name="oprasi" id="">
+                        <option value="penjumlahan">penjumlahan</option>
+                        <option value="pengurangan">pengurangan</option>
+                        <option value="perkalian">perkalian</option>
+                        <option value="pembagian">pembagian</option>
+                    </select>                    
                 </td>
                 
             </tr>
@@ -40,17 +39,57 @@
     </form>
     <?php 
 
-   class penjumlahan{
-    function tampil(){
-        $a = $_POST["angka1"];
-        $b = $_POST["angka2"];
-        $total = $a * $b;
-        echo "Hasil nya : ".$total;
+//    class penjumlahan{
+//     function tampil(){
+//         $a = $_POST["angka1"];
+//         $b = $_POST["angka2"];
+//         $total = $a * $b;
+//         echo "Hasil nya : ".$total;
         
+//     }
+//    }
+//    $hitung1 = new Penjumlahan();
+//    echo $hitung1->tampil();
+
+
+class penjumlahan {
+    var $angka1;
+    var $angka2;
+    var $hasil;
+
+    function penjumlahan(){
+        if($_POST["oprasi"]=="penjumlahan"){
+            echo $this->hasil = $this->angka1 = $_POST["angka1"] + $this->angka2 = $_POST["angka2"];
+        }elseif($_POST["oprasi"]=="pengurangan"){
+            echo $this->hasil = $this->angka1 = $_POST["angka1"] - $this->angka2 = $_POST["angka2"];
+        }elseif($_POST["oprasi"]=="perkalian"){
+            echo $this->hasil = $this->angka1 = $_POST["angka1"] * $this->angka2 = $_POST["angka2"];
+        }elseif($_POST["oprasi"]=="pembagian"){
+            echo $this->hasil = $this->angka1 = $_POST["angka1"] / $this->angka2 = $_POST["angka1"];
+        }
     }
-   }
-   $hitung1 = new Penjumlahan();
-   echo $hitung1->tampil();
+}
+
+// class pengurangan {
+//     var $angka1;
+//     var $angka2;
+//     var $hasil;
+
+//     function pengurangan(){
+//         if($_POST["oprasi"]=="pengurangan"){
+//             echo $this->hasil = $this->angka1 = $_POST["angka1"] - $this->angka2 = $_POST["angka1"];
+//         }
+//     }
+// }
+
+
+$penjumlahan = new penjumlahan();
+// $hasil->angka1 = 10;
+// $hasil->angka1 = 20;
+$penjumlahan->penjumlahan();
+
+// $pengurangan = new pengurangan();
+// $pengurangan->pengurangan();
 ?>
 
 </body>

@@ -46,5 +46,6 @@ class Produk{
  echo $motor->cekStok();
  
  $motor ->TambahProduk(10);// penambahan produk
+ $motor ->TambahProduk(90);// penambahan produk
  echo $motor->cekStok();
 ?>
