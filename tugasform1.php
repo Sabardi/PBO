@@ -50,13 +50,17 @@ $penjumlahan = new matika();
 $penjumlahan->angka1();
 
 class penjumlahan{
-    public $angka;
-    public $hasil;
+    // public $angka1;
+    // public $angka2;
+    // public $hasil;
 
     function hitung(){
         
     }
 }
+
+$penjumlahan = new penjumlahan();
+
 ?>
 </body>
 </html>
