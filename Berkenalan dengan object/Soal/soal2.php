@@ -30,16 +30,16 @@ class produk{
 
     function TambahProduk($barang){
         $totalstok = $this->stok +$barang;
-        if ($totalstok <= 100) {
-            $this->stok = $totalstok;
-            $pesan = "stok berhasil ditambah <br>";
-            $pesan = " Jumlah stok saat ini : ".$this->stok." <br>";
-        }
-        else{
-            $pesan = "Maaf, stok sudah penuh. Penambahan stok dibatalkan <br>"; 
-            $pesan = "Jumlah stok saat ini: ".$this->stok."<br>"; 
-        }
-        return $pesan;
+        // if ($totalstok <= 100) {
+        //     $this->stok = $totalstok;
+        //     $pesan = "stok berhasil ditambah <br>";
+        //     $pesan = " Jumlah stok saat ini : ".$this->stok." <br>";
+        // }
+        // else{
+        //     $pesan = "Maaf, stok sudah penuh. Penambahan stok dibatalkan <br>"; 
+        //     $pesan = "Jumlah stok saat ini: ".$this->stok."<br>"; 
+        // }
+        // return $pesan;
     }   
 
 }
