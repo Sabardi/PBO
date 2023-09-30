@@ -35,12 +35,20 @@
                 </td>
                 
             </tr>
-
             <tr>
                 <td><button type="submit" name="hitung">Hitung</button></td>
             </tr>
         </table>
     </form>
+
+    <table align="center">
+        <tr>
+                <td><label for="">Hasil nya</label></td>
+                <td>:</td>
+                <td><textarea name="hasil" id="hasil" cols="20" rows="10" ></textarea>
+                </td>
+            </tr>
+    </table>
 
     <?php
 
@@ -50,35 +58,36 @@ class penjumlahan {
     var $angka2;
     var $hasil;
     function hasil(){
-        echo $this->hasil = $this->angka1 = $_POST["angka1"] + $this->angka2 = $_POST["angka2"];
+        $this->hasil =$_POST["hasil"] = $this->angka1 = $_POST["angka1"] + $this->angka2 = $_POST["angka2"];
+        echo "Hasil nya : ".$this->hasil = $_POST["hasil"];
     }
 }
 
 class pengurangan {
-    var $angka1;
-    var $angka2;
+    var $angka3;
+    var $angka4;
     var $hasil;
     function hasil(){
-        echo $this->hasil = $this->angka1 = $_POST["angka1"] - $this->angka2 = $_POST["angka2"];
+        echo "Hasil nya : ".$this->hasil = $this->angka3 = $_POST["angka1"] - $this->angka4 = $_POST["angka2"];
     }
 }
 
 class perkalian {
-    var $angka1;
-    var $angka2;
+    var $angka5;
+    var $angka6;
     var $hasil;
     function hasil(){
-        echo $this->hasil = $this->angka1 = $_POST["angka1"] * $this->angka2 = $_POST["angka2"];
+        echo "Hasil nya : ". $this->hasil = $this->angka5 = $_POST["angka1"] * $this->angka6 = $_POST["angka2"];
     }
     
 }
 
 class pembagian {
-    var $angka1;
-    var $angka2;
+    var $angka7;
+    var $angka8;
     var $hasil;
     function hasil(){
-        echo $this->hasil = $this->angka1 = $_POST["angka1"] / $this->angka2 = $_POST["angka2"];
+        echo "Hasil nya : ". $this->hasil = $this->angka7 = $_POST["angka1"] / $this->angka8 = $_POST["angka2"];
     }
 }
 if($_POST["oprasi"]=="penjumlahan"){
@@ -86,16 +95,16 @@ if($_POST["oprasi"]=="penjumlahan"){
     $penjumlahan->hasil();
 
 }elseif($_POST["oprasi"]=="pengurangan"){
-    $penjumlahan = new pengurangan();
-    $penjumlahan->hasil();
+    $pengurangan = new pengurangan();
+    $pengurangan->hasil();
 }
 elseif($_POST["oprasi"]=="perkalian"){
-    $penjumlahan = new perkalian();
-    $penjumlahan->hasil();
+    $perkalian = new perkalian();
+    $perkalian->hasil();
 
 }elseif($_POST["oprasi"]=="pembagian"){
-    $penjumlahan = new pembagian();
-    $penjumlahan->hasil();
+    $pembagian = new pembagian();
+    $pembagian->hasil();
 }
 ?>
 </body>
