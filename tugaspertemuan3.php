@@ -41,14 +41,32 @@
         </table>
     </form>
 
-    <table align="center">
+        <table align="center">
         <tr>
                 <td><label for="">Hasil nya</label></td>
                 <td>:</td>
-                <td><textarea name="hasil" id="hasil" cols="20" rows="10" ></textarea>
+                <td><textarea name="hasil" id="hasil" cols="20" rows="10" >
+                    <?php if($_POST["oprasi"]=="penjumlahan"){
+    $penjumlahan = new penjumlahan();
+    $penjumlahan->hasil();
+
+}elseif($_POST["oprasi"]=="pengurangan"){
+    $pengurangan = new pengurangan();
+    $pengurangan->hasil();
+}
+elseif($_POST["oprasi"]=="perkalian"){
+    $perkalian = new perkalian();
+    $perkalian->hasil();
+
+}elseif($_POST["oprasi"]=="pembagian"){
+    $pembagian = new pembagian();
+    $pembagian->hasil();
+} ?>
+                </textarea>
                 </td>
             </tr>
-    </table>
+        </table>
+    
 
     <?php
 
@@ -89,22 +107,6 @@ class pembagian {
     function hasil(){
         echo "Hasil nya : ". $this->hasil = $this->angka7 = $_POST["angka1"] / $this->angka8 = $_POST["angka2"];
     }
-}
-if($_POST["oprasi"]=="penjumlahan"){
-    $penjumlahan = new penjumlahan();
-    $penjumlahan->hasil();
-
-}elseif($_POST["oprasi"]=="pengurangan"){
-    $pengurangan = new pengurangan();
-    $pengurangan->hasil();
-}
-elseif($_POST["oprasi"]=="perkalian"){
-    $perkalian = new perkalian();
-    $perkalian->hasil();
-
-}elseif($_POST["oprasi"]=="pembagian"){
-    $pembagian = new pembagian();
-    $pembagian->hasil();
 }
 ?>
 </body>
