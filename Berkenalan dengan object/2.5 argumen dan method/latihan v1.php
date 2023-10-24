@@ -23,13 +23,14 @@ class Produk{
         // echo "Total stok : $TotalStok";
         if ($TotalStok <=100) {
             $this->stok = $TotalStok;
-            echo "stok berhasil di tambahkan <br>";
-            echo "jumlah stok saat ini : ".$this->stok."<br>";
+            $pesan = "stok berhasil di tambahkan <br>";
+            $pesan = "jumlah stok saat ini : ".$this->stok."<Br>";
         }
         else {
-            echo "Maaf, stok sudah penuh. Penambahan stok dibatalkan <br>";
-            echo "jumlah stok saat ini : ".$this->stok;
+            $pesan = "Maaf, stok sudah penuh. Penambahan stok dibatalkan <br>";
+            $pesan .= "jumlah stok saat ini : ".$this->stok;
         }
+        return $pesan;
     }
 }
 
@@ -38,9 +39,11 @@ $produk->jenis ="Hp";
 $produk->merek ="vivo";
 // $produk->stok = 50;
 $produk->stok = 50; //jk di kasih nilai method nya nanti bakalan di hitung juga
-$produk->TambahStok(20);
-$produk->TambahStok(20);
-$produk->TambahStok();
+
+echo $produk->TambahStok(20);
+echo $produk->TambahStok(20);
+echo $produk->TambahStok(20);
+echo $produk->TambahStok(20);
 
 
 ?>
