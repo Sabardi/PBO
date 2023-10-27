@@ -10,7 +10,7 @@ class constark{
     function __construct($judul){
         echo "Ini matakuliah " . $this->judul = $judul . "<br>";
     }
-
+    
     // ini destruknya
     function __destruct(){
         echo "ini desktruct nya ";
@@ -28,13 +28,13 @@ class constark{
     }
     // melakukan pemanggilan dari berinama pekerjaan
     function PanggilnamaDanpekerjaan() {
-        return "nama nya adalah : ". $this->Nama. " dan Hobi nya : ". $this->pekerjaan . "<br>";
+        return "nama nya adalah : ". $this->Nama. " dan Pekerjaan nya : ". $this->pekerjaan . "<br>";
     }
 
 }
 
 $tampil = new constark("Belajar constrak");
 $tampil->Tampiljudul();
-$tampil->BerinamaDanpekerjaan("Asep", "kuli");
+$tampil->BerinamaDanpekerjaan("Asep", "Guru");
 echo $tampil->PanggilnamaDanpekerjaan();
 ?>
