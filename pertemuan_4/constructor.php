@@ -1,25 +1,40 @@
 <?php
 class constark{
     // properti
-
-
+    public $Nama;
+    public $pekerjaan;
+    public $judul;
+    
     // method
-    function __construct(){
-        echo "ini constract <br>";
-    }
- function __destruct()
-    {
-        echo "ini desktruct";
+    //ini constak nya
+    function __construct($judul){
+        echo "Ini matakuliah " . $this->judul = $judul . "<br>";
     }
 
+    // ini destruknya
+    function __destruct(){
+        echo "ini desktruct nya ";
+    }
+    //menampilkan judul yang di kirim ke constrak
+    function Tampiljudul(){
+        return $this->judul;
+    }
 
-    function tampilnama(){
-        echo "tampil nama  <br>";
-    }   
+    function BerinamaDanpekerjaan($Nama, $pekerjaan){
+        echo "<b>Nilai dari argumen dan parameter Nama dan pekerjaan</b> <br>";
+        $this->Nama = $Nama;
+        $this->pekerjaan = $pekerjaan;
+
+    }
+    // melakukan pemanggilan dari berinama pekerjaan
+    function PanggilnamaDanpekerjaan() {
+        return "nama nya adalah : ". $this->Nama. " dan Hobi nya : ". $this->pekerjaan . "<br>";
+    }
 
 }
 
-$tampil = new constark();
-$tampil->tampilnama();
-
+$tampil = new constark("Belajar constrak");
+$tampil->Tampiljudul();
+$tampil->BerinamaDanpekerjaan("Asep", "kuli");
+echo $tampil->PanggilnamaDanpekerjaan();
 ?>
