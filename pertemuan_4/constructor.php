@@ -8,7 +8,7 @@ class constark{
     // method
     //ini constak nya
     function __construct($judul){
-        echo "Ini matakuliah " . $this->judul = $judul . "<br>";
+        echo "<h1>Ini matakuliah " . $this->judul = $judul . "<br>";
     }
     
     // ini destruknya
@@ -33,8 +33,8 @@ class constark{
 
 }
 
-$tampil = new constark("Belajar constrak");
-$tampil->Tampiljudul();
+$tampil = new constark("Belajar constrak</h1>");
+// $tampil->Tampiljudul();
 $tampil->BerinamaDanpekerjaan("Asep", "Guru");
 echo $tampil->PanggilnamaDanpekerjaan();
 ?>
