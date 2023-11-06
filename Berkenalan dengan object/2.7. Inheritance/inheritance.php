@@ -43,9 +43,11 @@ echo $produk02->CekStoktelvisi();
 echo "<br>";
 
 $produk03 = new TelvisiLCD();
-echo $produk01->merek;
+echo $produk03->merek;
 echo "<br>";
-echo $produk02->jenis;
+echo $produk03->jenis;
+echo "<br>";
+echo $produk03->tipe;
 echo "<br>";
 echo $produk03->CekstokTelvisiLCD();
 
