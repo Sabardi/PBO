@@ -6,7 +6,7 @@ class produk{
     public function cekstok() {
         $merek = $this->merek;
         $stok  = $this->stok ;
-        return "merek nya : ". $merek." dan jumlah stok nya :". $this->stok;
+        return "merek nya : ". $merek." dan jumlah stok nya :".$stok;
     }    
 }
 
@@ -18,7 +18,7 @@ class telvisi extends produk{
     }
 }
 
-class CekstokTelvisiLCD extends telvisi{
+class TelvisiLCD extends telvisi{
     public $tipe = "led";
 
     public function CekstokTelvisiLCD() {
@@ -42,7 +42,11 @@ $produk02 = new telvisi();
 echo $produk02->CekStoktelvisi();
 echo "<br>";
 
-$produk03 = new CekstokTelvisiLCD();
+$produk03 = new TelvisiLCD();
+echo $produk01->merek;
+echo "<br>";
+echo $produk02->jenis;
+echo "<br>";
 echo $produk03->CekstokTelvisiLCD();
 
 ?>
